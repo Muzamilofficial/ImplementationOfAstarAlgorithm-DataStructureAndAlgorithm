@@ -1,5 +1,5 @@
 # ImplementationOfAstarAlgorithm-DataStructureAndAlgorithm
-Implementation Of Astar (A*) Algorithm in "Data Structure And Algorithm" course in my 3rd semister
+Implementation Of Astar (A*) Algorithm in "Data Structure And Algorithm" course in my 3rd semester
 
 ![1](https://user-images.githubusercontent.com/113015136/201092184-90ff652a-c5a2-4cf8-aba5-085605c088eb.PNG)
 ![2](https://user-images.githubusercontent.com/113015136/201092198-6ec3bc12-907c-46ad-b48b-6074b40d82d3.PNG)
