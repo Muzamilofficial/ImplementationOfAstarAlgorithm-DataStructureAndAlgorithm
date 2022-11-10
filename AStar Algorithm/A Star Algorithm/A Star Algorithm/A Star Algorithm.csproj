@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F53FE7E0-0505-4F78-9BD9-5F37CA9FCD7D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>A_Star_Algorithm</RootNamespace>
+    <AssemblyName>Artificial Intelligence Project</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.RunTime.1.2.0.3\lib\net40-Client\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Design.1.2.0.3\lib\net40\MetroFramework.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.2.0.3, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroFramework.Fonts.1.2.0.3\lib\net40\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form_Dijkstra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Dijkstra.Designer.cs">
+      <DependentUpon>Form_Dijkstra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_Rules.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_Rules.Designer.cs">
+      <DependentUpon>Form_Rules.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_SelectionDashbaord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_SelectionDashbaord.Designer.cs">
+      <DependentUpon>Form_SelectionDashbaord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form_Dijkstra.resx">
+      <DependentUpon>Form_Dijkstra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_Rules.resx">
+      <DependentUpon>Form_Rules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_SelectionDashbaord.resx">
+      <DependentUpon>Form_SelectionDashbaord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MetroFramework.txt" />
+    <None Include="Resources\arrow-32-16.png" />
+    <None Include="Resources\arrow-96-16.png" />
+    <None Include="Resources\save-16%281%29.png" />
+    <None Include="Resources\refresh-24.png" />
+    <None Include="Resources\ok-16.png" />
+    <None Include="Resources\1.PNG" />
+    <None Include="Resources\minus-4-16.png" />
+    <None Include="Resources\mk1.png" />
+    <None Include="Resources\mk.png" />
+    <None Include="Resources\arrow-99-24.png" />
+    <None Include="Resources\rules.jpg" />
+    <None Include="Resources\maxresdefault.jpg" />
+    <None Include="Resources\Capture.PNG" />
+    <None Include="Resources\images-removebg-preview.png" />
+    <None Include="Resources\Capture-removebg-preview.png" />
+    <None Include="Resources\unnamed-removebg-preview.png" />
+    <None Include="Resources\logo-removebg-preview.png" />
+    <None Include="Resources\download-removebg-preview.png" />
+    <None Include="Resources\facebook_icon-icons.com_66092-removebg-preview.png" />
+    <None Include="Resources\fb_icon_325x325-removebg-preview.png" />
+    <None Include="Resources\shutdown-icon-18-24.png" />
+    <None Include="Resources\report-24.png" />
+    <None Include="Resources\report-3-16.png" />
+    <None Include="Resources\purchase-order-24.png" />
+    <None Include="Resources\login-16.png" />
+    <None Include="Resources\logout-24.png" />
+    <None Include="Resources\combo-24.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

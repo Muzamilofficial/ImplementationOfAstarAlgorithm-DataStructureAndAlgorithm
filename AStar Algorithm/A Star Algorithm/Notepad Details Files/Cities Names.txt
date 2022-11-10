@@ -1,0 +1,21 @@
+************************************* Total Cities = 20 *************************************
+1): Karachi
+2): Hyderabad
+3): Mipur Khas
+4): Nawabshah
+5): Sukkur
+6): Nasirabad
+7): Chaman
+8): Zhob
+9): Turbat
+10): Gwader
+11): Bharwalpur
+12): Rahim Yar Khan
+13): Multan
+14): Lahore
+15): Islamabad
+16): Rawalpindi
+17): Murree
+18): Peshawer
+19): Abbottabad
+20): Chitral

@@ -1,0 +1,389 @@
+// Loop For Clear Buttons
+            //foreach (Control item in Panel_City.Controls.OfType<Button>())
+            //{
+            //    Panel_City.Controls.Remove(item);
+            //}
+
+            // Loop For clear The Labels
+            //foreach (Control item in Panel_City.Controls.OfType<Label>())
+            //{
+            //    Panel_City.Controls.Remove(item);
+            //    Panel_City.Controls.OfType<Button>().ToList().ForEach(btn => btn.Dispose());
+            //}
+
+
+            //// Loop For clear The Labels And Buttons
+            //foreach (Control c in Panel_City.Controls.OfType<Label>().ToList())
+            //{
+            //    Panel_City.Controls.Remove(c);
+            //    c.Visible = false;
+            //    foreach (Control cc in Panel_City.Controls.OfType<Button>().ToList())
+            //    {
+            //        Panel_City.Controls.Remove(cc);
+            //        cc.Visible = false;
+            //    }
+            //}
+
+        // 
+
+        // Unhide The Controls On Button Click Of Panel_City
+        //public void VisibleControls()
+        //{
+        //    if (Combobox_StartNode.Text == "Karachi" || Combobox_EndNode.Text == "Karachi")
+        //    {
+        //        foreach (var lbl in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "Label_Karachi"))
+        //        {
+        //            foreach (var btn in Panel_City.Controls.OfType<Button>().Where(x => x.Name == "Button_Karachi"))
+        //            {
+        //                btn.Show();
+        //            }
+
+        //            lbl.Show();
+        //        }
+        //    }
+
+        //    if (Label_Karachi.Visible == true)
+        //    {
+        //        KarachiFNValues();
+        //    }
+
+        //    if (Combobox_StartNode.Text == "Hyderabad")
+        //    {
+        //        foreach (var lbl in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "Label_Hyderabad"))
+        //        {
+        //            foreach (var btn in Panel_City.Controls.OfType<Button>().Where(x => x.Name == "Button_Hyderabad"))
+        //            {
+        //                btn.Show();
+        //            }
+
+        //            lbl.Show();
+        //        }
+        //    }
+
+        //    if (Combobox_StartNode.Text == "Mipur Khas" || Combobox_EndNode.Text == "Mipur Khas")
+        //    {
+        //        foreach (var lbl in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "Label_MipurKhas"))
+        //        {
+        //            foreach (var btn in Panel_City.Controls.OfType<Button>().Where(x => x.Name == "Button_MipurKhas"))
+        //            {
+        //                btn.Show();
+        //            }
+
+        //            lbl.Show();
+        //        }
+        //    }
+
+        //    if (Combobox_StartNode.Text == "Nawabshah")
+        //    {
+
+        //        foreach (var lbl in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "label2"))
+        //        {
+        //            lbl.Show();
+        //        }
+        //    }
+        //}
+
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Artificial_Intelligence_Project
+{
+    public partial class Form_Dijkstra : MetroFramework.Forms.MetroForm
+    {
+        public Form_Dijkstra()
+        {
+            InitializeComponent();
+
+            // Initialize The Values To Nodes
+        }
+
+        private void Form_Dijkstra_Load(object sender, EventArgs e)
+        {
+            // Hiding The Goal Node Label
+            Label_GoalNode.Visible = false;
+            Label_GoalFound.Visible = false;
+        }
+
+        // Event Of Exit The Application When Form Is Closing
+        private void Form_Dijkstra_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // Method To Generate The Starting Node
+        public void GenerateStartingNode()
+        {
+            if (Combobox_StartNode.Text != Combobox_EndNode.Text)
+            {
+                if (Combobox_StartNode.Text == "Karachi")
+                {
+                    foreach (var lbl in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "Label_Karachi"))
+                    {
+                        foreach (var btn in Panel_City.Controls.OfType<Button>().Where(x => x.Name == "Button_Karachi"))
+                        {
+                            btn.Show();
+                        }
+                        foreach (var btn in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "Label_KarachiGN"))
+                        {
+                            btn.Show();
+                        }
+                        foreach (var btn in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "Label_KarachiTreeValue"))
+                        {
+                            btn.Show();
+                        }
+
+                        Hidden_Textbox.Text = "Karachi";
+                        if (Hidden_Textbox.Text != Combobox_EndNode.Text)
+                        {
+                            Btn_Forward.Enabled = false;
+                        }
+
+                        lbl.Show();
+                    }
+                }
+
+                if (Combobox_StartNode.Text == "Hyderabad")
+                {
+                    foreach (var lbl in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "Label_Hyderabad"))
+                    {
+                        foreach (var btn in Panel_City.Controls.OfType<Button>().Where(x => x.Name == "Btn_Hyderabad"))
+                        {
+                            btn.Show();
+                        }
+                        foreach (var btn in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "label4"))
+                        {
+                            btn.Show();
+                        }
+                        //foreach (var btn in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "Label_KarachiTreeValue"))
+                        //{
+                        //    btn.Show();
+                        //}
+
+                        Hidden_Textbox.Text = "Hyderabad";
+                        if (Hidden_Textbox.Text != Combobox_EndNode.Text)
+                        {
+                            Btn_Forward.Enabled = false;
+                        }
+
+                        lbl.Show();
+                    }
+                }
+            }
+            else
+            {
+                Label_GoalFound.Visible = true;
+                Btn_Forward.Visible = false;
+                Btn_Back.Visible = false;
+                btn_Submit.Enabled = true;
+                SameNodeFunction();
+            }
+        }
+
+        // Function To Generate The Neighbours
+        public void Neighbours()
+        {
+            if (Textbox_PrevoiusNode.Text != Combobox_EndNode.Text)
+            {
+                // Karachi To Hyderabad
+
+                if (Hidden_Textbox.Text == "Karachi" && Textbox_PrevoiusNode.Text == "Karachi")
+                {
+                    foreach (var lbl in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "Label_Hyderabad"))
+                    {
+                        foreach (var btn in Panel_City.Controls.OfType<Button>().Where(x => x.Name == "Button_Hyderabad"))
+                        {
+                            btn.Show();
+                        }
+                        foreach (var btn in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "label42"))
+                        {
+                            btn.Show();
+                        }
+                        foreach (var btn in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "label91"))
+                        {
+                            btn.Show();
+                        }
+                        foreach (var btn in Panel_City.Controls.OfType<Button>().Where(x => x.Name == "Btn_Hyderabad"))
+                        {
+                            btn.Show();
+                        }
+                        foreach (var btn in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "label3"))
+                        {
+                            btn.Show();
+                        }
+                        foreach (var btn in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "label4"))
+                        {
+                            btn.Show();
+                        }
+
+                        Hidden_Textbox.Text = "Hyderabad";
+                        if (Hidden_Textbox.Text != Combobox_EndNode.Text)
+                        {
+                            Btn_Forward.Enabled = false;
+                        }
+
+                        lbl.Show();
+                        int FN = 71 + 3;
+                        listBox1.Items.Add("Karachi To Hyderabad 71 + 3 = " + FN);
+
+                        int FN2 = 151 + 11;
+                        listBox1.Items.Add("Karachi To Gwader 151 + 11 = " + FN2);
+                        listBox1.Items.Add("");
+                        listBox1.Items.Add("So It Will Move To Hyderabad");
+                    }
+                }
+                // Hyderabad To Mirpur Khas
+
+                if (Hidden_Textbox.Text == "Hyderabad" && Textbox_PrevoiusNode.Text == "Hyderabad")
+                {
+                    foreach (var lbl in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "Label_Hyderabad"))
+                    {
+                        foreach (var btn in Panel_City.Controls.OfType<Button>().Where(x => x.Name == "Button_MipurKhas"))
+                        {
+                            btn.Show();
+                        }
+                        foreach (var btn in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "label43"))
+                        {
+                            btn.Show();
+                        }
+                        foreach (var btn in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "label5"))
+                        {
+                            btn.Show();
+                        }
+                        foreach (var btn in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "label92"))
+                        {
+                            btn.Show();
+                        }
+
+                        Hidden_Textbox.Text = "Hyderabad";
+                        if (Hidden_Textbox.Text != Combobox_EndNode.Text)
+                        {
+                            Btn_Forward.Enabled = false;
+                        }
+
+                        lbl.Show();
+                        int FN = 75 + 3;
+                        listBox1.Items.Add("Hyderabad To Mirpur Khas 75 + 3 = " + FN);
+
+                        listBox1.Items.Add("");
+                        listBox1.Items.Add("So It Will Move To Mirpur Khas");
+                    }
+                }
+            }
+            else
+            {
+                Label_GoalFound.Visible = true;
+                Btn_Forward.Visible = false;
+                Btn_Back.Visible = false;
+                btn_Submit.Enabled = true;
+            }
+        }
+
+        // Function Call If Start Node And End Node Is Same
+        public void SameNodeFunction()
+        {
+            if (Combobox_StartNode.Text == "Karachi" && Combobox_StartNode.Text == "Karachi")
+            {
+                foreach (var lbl in Panel_City.Controls.OfType<Label>().Where(x => x.Name == "Label_Karachi"))
+                {
+                    foreach (var btn in Panel_City.Controls.OfType<Button>().Where(x => x.Name == "Button_Karachi"))
+                    {
+                        btn.Show();
+                    }
+                    lbl.Show();
+                    int FN = 5 + 0;
+                    listBox1.Items.Add("Karachi 5 + 0 = " + FN);
+                }
+            }
+        }
+
+        // Function For Calculating FN&GN
+        public void FormulaCalculationForDifferentNode()
+        {
+            if (Textbox_PrevoiusNode.Text == "Karachi")
+            {
+                
+            }
+        }
+
+        // To Exit The Application
+        private void button22_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        // Check Whether The values Of Checkboxes Are Selected Or Not
+        public void OKButtonFuction()
+        {
+            // First Validate That All TextBoxes Are Selected Or Not
+            if (Combobox_StartNode.Text != "" && Combobox_EndNode.Text != "")
+            {
+                btn_Submit.Enabled = false;
+
+                ClearControls();
+
+            }
+
+            // If Textboxes Are Not Selected So Display This Error
+            else
+            {
+                MessageBox.Show("Starting or Goal state is missing", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Hide The Controls On Button Click Of Panel_City
+        public void ClearControls()
+        {
+            foreach (var lbl in Panel_City.Controls.OfType<Label>())
+            {
+                foreach (var btn in Panel_City.Controls.OfType<Button>())
+                {
+                    btn.Hide();
+                }
+
+                lbl.Hide();
+            }
+        }
+
+        // Calculate FN Values
+        public void KarachiFNValues()
+        {
+            // Karchi To Hyderabad
+            int FB = 0 + 5;
+            listBox1.Items.Add("Karachi 0 + 5 = " + FB);
+
+            int FB2 = 71 + 3;
+            listBox1.Items.Add("Karachi 71 + 3 = " + FB2);
+        }
+
+        // Submit Button Coding
+        private void btn_Submit_Click(object sender, EventArgs e)
+        {
+            // Calling Of OKButtonFunction
+            OKButtonFuction();
+        }
+
+        private void Btn_Forward_Click(object sender, EventArgs e)
+        {
+            //VisibleControls();
+
+            // Calling Of Starting Node Function
+            GenerateStartingNode();
+
+            // Calling Of Neighbours Function
+            Neighbours();
+        }
+
+        private void Textbox_PrevoiusNode_DoubleClick(object sender, EventArgs e)
+        {
+            Textbox_PrevoiusNode.Text = Hidden_Textbox.Text;
+            Btn_Forward.Enabled = true;
+        }
+    }
+}

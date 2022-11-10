@@ -1,0 +1,26 @@
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\bin\Debug\Artificial Intelligence Project.exe.config
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\obj\Debug\Artificial Intelligence Project.exe
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\obj\Debug\Artificial Intelligence Project.pdb
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\bin\Debug\Artificial Intelligence Project.exe
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\bin\Debug\Artificial Intelligence Project.pdb
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\bin\Debug\MetroFramework.dll
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\bin\Debug\MetroFramework.Fonts.dll
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\obj\Debug\A Star Algorithm.csprojResolveAssemblyReference.cache
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\obj\Debug\A Star Algorithm.csproj.GenerateResource.Cache
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\obj\Debug\A_Star_Algorithm.Form_Dijkstra.resources
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\obj\Debug\A_Star_Algorithm.Form_Rules.resources
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\obj\Debug\A_Star_Algorithm.Form_SelectionDashbaord.resources
+E:\Degree Projects\Artificial Intelligence (AI)\Project\A Star Algorithm\A Star Algorithm\obj\Debug\A_Star_Algorithm.Properties.Resources.resources
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\bin\Debug\Artificial Intelligence Project.exe.config
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\obj\Debug\Artificial Intelligence Project.exe
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\obj\Debug\Artificial Intelligence Project.pdb
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\bin\Debug\Artificial Intelligence Project.exe
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\bin\Debug\Artificial Intelligence Project.pdb
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\bin\Debug\MetroFramework.dll
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\bin\Debug\MetroFramework.Fonts.dll
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\obj\Debug\A Star Algorithm.csprojResolveAssemblyReference.cache
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\obj\Debug\A_Star_Algorithm.Form_Dijkstra.resources
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\obj\Debug\A_Star_Algorithm.Form_Rules.resources
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\obj\Debug\A_Star_Algorithm.Form_SelectionDashbaord.resources
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\obj\Debug\A_Star_Algorithm.Properties.Resources.resources
+G:\Degree Projects\Data Structure & Algorithm (DSA)\Project II A Star Algorithm\A Star Algorithm\A Star Algorithm\obj\Debug\A Star Algorithm.csproj.GenerateResource.Cache
